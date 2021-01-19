@@ -50,4 +50,15 @@ function interview(cb) {
 }
 ```
 如上error会抛出到全局，在node中全局抛出错误会导致nodejs程序奔溃。
-原因：try-catch的错误捕获机制是函数的调用栈，而setTimeout的回调函数是在另一个事件循环里的，导致最外层的 try-catch无法捕获。
+原因：try-catch的错误捕获机制是函数的调用栈，而setTimeout的回调函数是在另一个事件循环里的，导致最外层的 try-catch无法捕获(一个全新的函数调用栈)。
+
+
+```markdow
+Express
+
+要了解一个框架，最好的方法：
+  了解它的关键功能（官网?npm介绍页面--Features?）
+  推到出它要解决的问题是什么
+
+
+```
